@@ -1,0 +1,23 @@
+{
+  "name": "learnmern",
+  "version": "1.0.0",
+  "description": "Learning Mern Stack",
+  "homepage": "https://github.com/ChaitanyaVarma568/learnMern#readme",
+  "bugs": {
+    "url": "https://github.com/ChaitanyaVarma568/learnMern/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaitanyaVarma568/learnMern.git"
+  },
+  "license": "ISC",
+  "author": "Chaitanya",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "superheroes": "^4.0.0"
+  }
+}
