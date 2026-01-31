@@ -27,3 +27,19 @@ app.get("/contact", (req, res) => {
     <p>You can reach us at localhost:${port}/contact.</p>
     </div>`);
 });
+
+app.post("/submit", (req, res) => {
+  res.send(200);
+});
+
+app.put("/update", (req, res) => {
+  res.send(200);
+});
+
+app.patch("/modify", (req, res) => {
+  res.send(200);
+});
+
+app.delete("/remove", (req, res) => {
+  res.send(200);
+});
