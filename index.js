@@ -1,17 +1,18 @@
 import express from "express";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3311;
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
 app.get("/", (req, res) => {
-  res.send(`<div>
-    <h1>Welcome to the Home Page of Our Express Server!</h1>
-    <p>This is a simple Express server running on port ${port}.</p>
-    </div>`);
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get("/about", (req, res) => {
@@ -29,7 +30,8 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-  res.send(200);
+  console.log(req.body);
+  res.send("Form data received successfully.");
 });
 
 app.put("/update", (req, res) => {
